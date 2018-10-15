@@ -1,0 +1,28 @@
+{
+  "name": "certification",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "organization": {
+      "type": "belongsTo",
+      "model": "organization",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

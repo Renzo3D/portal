@@ -1,0 +1,142 @@
+{
+  "name": "student",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "timeStamp": {
+      "type": "string"
+    },
+    "skills": {
+      "type": ["string"]
+    },
+    "userType": {
+      "type": "string",
+      "required" : true
+    },
+    "profileScore": {
+      "type": "number",
+      "default": 0
+    },
+    "resume": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object"
+    },
+    "studentDescription": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "profilePicture": {
+      "type": "string"
+    },
+    "coverPhoto": {
+      "type": "string"
+    },
+    "schoolName": {
+      "type": "string"
+    },
+    "graduationDate": {
+      "type": "date"
+    },
+    "socialMedia": {
+      "type": "object"
+    },
+    "jobSearchStatus": {
+      "type": "string"
+    },
+    "desiredRole": {
+      "type": "string"
+    },
+    "openToRelocate": {
+      "type": "boolean"
+    },
+    "projects": {
+      "type": ["object"]
+    },
+    "workHistory": {
+      "type": ["object"]
+    },
+    "educationHistory": {
+      "type": ["object"]
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": "true"
+    },
+    "hackerRankScore": {
+      "type": "number"
+    },
+    "hackerRankId": {
+      "type": "string"
+    },
+    "hackerRankUpdated": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "hasJob": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "customUser",
+      "foreignKey": "userId"
+    },
+    "conversations": {
+      "type": "hasMany",
+      "model": "conversation",
+      "foreignKey": ""
+    },
+    "organizations": {
+      "type": "hasMany",
+      "model": "organization",
+      "foreignKey": ""
+    },
+    "certifications": {
+      "type": "hasMany",
+      "model": "certification",
+      "foreignKey": ""
+    },
+    "questions": {
+      "type": "hasMany",
+      "model": "question",
+      "foreignKey": ""
+    },
+    "skills": {
+      "type": "hasMany",
+      "model": "skill",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

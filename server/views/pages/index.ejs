@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% const ejs = false; %>
+  <% include ../partials/head %>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+    var userFromServer = <%- JSON.stringify(user) %>;
+    </script>
+    <script src="/bundle.js"></script>
+    <% if (user.userType === 'EMPLOYEE') { %>
+      <% include ../partials/footer-employer %>
+      <% } else if (user.userType === 'STUDENT'){ %>
+      <% include ../partials/footer-student %>
+      <% } else { %>
+        <% include ../partials/footer %>
+    <% } %>
+  </body>
+</html>

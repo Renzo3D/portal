@@ -1,0 +1,55 @@
+{
+  "name": "customUser",
+  "base": "User",
+  "properties": {
+    "userType": {
+      "type": "string"
+    },
+    "emailVerified": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "student": {
+      "type": "hasOne",
+      "model": "student",
+      "foreignKey": "userId"
+    },
+    "employee": {
+      "type": "hasOne",
+      "model": "employee",
+      "foreignKey": "userId"
+    },
+    "admin": {
+      "type": "hasOne",
+      "model": "admin",
+      "foreignKey": "userId"
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId"
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

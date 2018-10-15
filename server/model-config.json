@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "sources": ["loopback/common/models", "loopback/server/models", "../common/models", "./models"],
+    "mixins": ["loopback/common/mixins", "loopback/server/mixins", "../common/mixins", "./mixins"]
+  },
+  "customUser": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "userCredential": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "admin": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "employee": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "student": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "MongoDB",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "job": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "company": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "school": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "organization": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "conversation": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "message": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "skill": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "question": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "certification": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "image": {
+    "dataSource": "amazonS3",
+    "public": true
+  }
+}

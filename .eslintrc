@@ -1,0 +1,35 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": "loopback",
+  "rules": {
+    "max-len": [
+      "error",
+      120,
+      4,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
+      }
+    ],
+    "comma-dangle": [0],
+    "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "no-extra-boolean-cast": 0,
+    "linebreak-style": 0,
+    "object-curly-spacing": 0,
+    "operator-linebreak": 0
+  }
+}

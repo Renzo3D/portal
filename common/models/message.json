@@ -1,0 +1,36 @@
+{
+  "name": "message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "attachments": {
+      "type": [
+        "string"
+      ]
+    },
+    "timestamp": {
+      "type": "date",
+      "required": true
+    },
+    "dateRead": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "conversation": {
+      "type": "belongsTo",
+      "model": "conversation",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "question",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "students": {
+      "type": "belongsTo",
+      "model": "student",
+      "foreignKey": ""
+    },
+    "employers": {
+      "type": "hasOne",
+      "model": "employee",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

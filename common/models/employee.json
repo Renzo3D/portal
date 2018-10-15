@@ -1,0 +1,92 @@
+{
+  "name": "employee",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "userType": {
+      "type": "string",
+      "required": true
+    },
+    "profileScore": {
+      "type": "number",
+      "default": 0
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "companyLocation": {
+      "type": "string"
+    },
+    "companyDescription": {
+      "type": "string"
+    },
+    "companyEmail": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "profilePicture": {
+      "type": "string"
+    },
+    "coverPhoto": {
+      "type": "string"
+    },
+    "jobOpenings": {
+      "type": [
+        "object"
+      ]
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "comments": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "company",
+      "foreignKey": ""
+    },
+    "customUser": {
+      "type": "belongsTo",
+      "model": "customUser",
+      "foreignKey": "userId"
+    },
+    "conversations": {
+      "type": "hasMany",
+      "model": "conversation",
+      "foreignKey": ""
+    },
+    "jobs": {
+      "type": "hasMany",
+      "model": "job",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

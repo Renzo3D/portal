@@ -1,0 +1,33 @@
+{
+  "name": "organization",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "certifications": {
+      "type": "hasMany",
+      "model": "certification",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
